@@ -21,6 +21,14 @@
 		0C0FCF0319190B77002473CC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C0FCEE519190B77002473CC /* UIKit.framework */; };
 		0C0FCF0B19190B77002473CC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0C0FCF0919190B77002473CC /* InfoPlist.strings */; };
 		0C0FCF0D19190B77002473CC /* Roost_DefenceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C0FCF0C19190B77002473CC /* Roost_DefenceTests.m */; };
+		0C0FCF1E19190BE8002473CC /* bullet.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C0FCF1619190BE8002473CC /* bullet.png */; };
+		0C0FCF1F19190BE8002473CC /* dangerzone.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C0FCF1719190BE8002473CC /* dangerzone.png */; };
+		0C0FCF2019190BE8002473CC /* emptytower.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C0FCF1819190BE8002473CC /* emptytower.png */; };
+		0C0FCF2119190BE8002473CC /* mainmenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C0FCF1919190BE8002473CC /* mainmenu.png */; };
+		0C0FCF2219190BE8002473CC /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C0FCF1A19190BE8002473CC /* map.png */; };
+		0C0FCF2319190BE8002473CC /* tankright.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C0FCF1B19190BE8002473CC /* tankright.png */; };
+		0C0FCF2419190BE8002473CC /* tankup.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C0FCF1C19190BE8002473CC /* tankup.png */; };
+		0C0FCF2519190BE8002473CC /* tower.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C0FCF1D19190BE8002473CC /* tower.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +61,14 @@
 		0C0FCF0819190B77002473CC /* Roost DefenceTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Roost DefenceTests-Info.plist"; sourceTree = "<group>"; };
 		0C0FCF0A19190B77002473CC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0C0FCF0C19190B77002473CC /* Roost_DefenceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Roost_DefenceTests.m; sourceTree = "<group>"; };
+		0C0FCF1619190BE8002473CC /* bullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bullet.png; sourceTree = "<group>"; };
+		0C0FCF1719190BE8002473CC /* dangerzone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dangerzone.png; sourceTree = "<group>"; };
+		0C0FCF1819190BE8002473CC /* emptytower.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emptytower.png; sourceTree = "<group>"; };
+		0C0FCF1919190BE8002473CC /* mainmenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainmenu.png; sourceTree = "<group>"; };
+		0C0FCF1A19190BE8002473CC /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
+		0C0FCF1B19190BE8002473CC /* tankright.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tankright.png; sourceTree = "<group>"; };
+		0C0FCF1C19190BE8002473CC /* tankup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tankup.png; sourceTree = "<group>"; };
+		0C0FCF1D19190BE8002473CC /* tower.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tower.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +142,14 @@
 		0C0FCEE819190B77002473CC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0C0FCF1619190BE8002473CC /* bullet.png */,
+				0C0FCF1719190BE8002473CC /* dangerzone.png */,
+				0C0FCF1819190BE8002473CC /* emptytower.png */,
+				0C0FCF1919190BE8002473CC /* mainmenu.png */,
+				0C0FCF1A19190BE8002473CC /* map.png */,
+				0C0FCF1B19190BE8002473CC /* tankright.png */,
+				0C0FCF1C19190BE8002473CC /* tankup.png */,
+				0C0FCF1D19190BE8002473CC /* tower.png */,
 				0C0FCEE919190B77002473CC /* Roost Defence-Info.plist */,
 				0C0FCEEA19190B77002473CC /* InfoPlist.strings */,
 				0C0FCEED19190B77002473CC /* main.m */,
@@ -228,9 +252,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C0FCF2219190BE8002473CC /* map.png in Resources */,
+				0C0FCF2319190BE8002473CC /* tankright.png in Resources */,
 				0C0FCEFA19190B77002473CC /* Images.xcassets in Resources */,
+				0C0FCF1F19190BE8002473CC /* dangerzone.png in Resources */,
+				0C0FCF2419190BE8002473CC /* tankup.png in Resources */,
+				0C0FCF2119190BE8002473CC /* mainmenu.png in Resources */,
+				0C0FCF1E19190BE8002473CC /* bullet.png in Resources */,
+				0C0FCF2519190BE8002473CC /* tower.png in Resources */,
 				0C0FCEEC19190B77002473CC /* InfoPlist.strings in Resources */,
 				0C0FCEF519190B77002473CC /* Main.storyboard in Resources */,
+				0C0FCF2019190BE8002473CC /* emptytower.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

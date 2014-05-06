@@ -14,3 +14,12 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+
+#define ROUTE_START_X -44
+#define ROUTE_START_Y 176
+#define ROUTE_LEFT_X 252
+#define ROUTE_LEFT_Y 176
+#define ROUTE_RIGHT_X 252
+#define ROUTE_RIGHT_Y 102
+#define ROUTE_END_X 568
+#define ROUTE_END_Y 102
