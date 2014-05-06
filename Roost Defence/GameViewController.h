@@ -24,15 +24,18 @@
     
     NSTimer *enemyMoving;
     NSTimer *towerAttacking;
+    NSTimer *bulletFiring;
     
     NSMutableArray *emptyDefenceTowers;
+    NSMutableArray *builtDefenceTowers;
 }
 
 - (void) startGame;
 - (void) endGame;
 - (void) enemyMovement;
 - (void) towerAttack;
+- (void) bulletFire;
 - (IBAction)buildADefenceTower:(id)sender;
-- (IBAction)defenceTowerBuilt:(id)sender;
+//- (IBAction)defenceTowerBuilt:(id)sender;
 
 @end

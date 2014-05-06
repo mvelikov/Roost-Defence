@@ -14,10 +14,25 @@
 
 @implementation GameViewController
 
+- (void) bulletFire
+{
+    int step = 1;
+    if (enemy.center.y < bullet.center.y) {
+        step = -1;
+    }
+    bullet.center = CGPointMake(bullet.center.x, bullet.center.y + step);
+}
 
 - (void) towerAttack
 {
-
+    for (UIImageView* tower in builtDefenceTowers) {
+        CGRect towerArea = CGRectMake(tower.center.x - 50, tower.center.y - 50, tower.center.x + 50, tower.center.y + 50);
+        if (CGRectIntersectsRect(towerArea, enemy.frame)) {
+            bullet.center = CGPointMake(tower.center.x, tower.center.y);
+            bullet.hidden = NO;
+            bulletFiring = [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(bulletFire) userInfo:nil repeats:YES];
+        }
+    }
 }
 - (IBAction)buildADefenceTower:(id)sender
 {
@@ -41,6 +56,7 @@
         tower = (UIImageView*) [touch view];
         tower.image = [UIImage imageNamed:TOWER];
         [emptyDefenceTowers removeObject:tower];
+        [builtDefenceTowers addObject:tower];
         
         for (UIImageView* image in emptyDefenceTowers) {
             image.hidden = YES;
@@ -57,6 +73,7 @@
     towerFour.image = [UIImage imageNamed:EMPTY_TOWER];
     
     emptyDefenceTowers = [[NSMutableArray alloc] init];
+    builtDefenceTowers = [[NSMutableArray alloc] init];
     [emptyDefenceTowers addObject:towerOne];
     [emptyDefenceTowers addObject:towerTwo];
     [emptyDefenceTowers addObject:towerThree];
@@ -69,7 +86,7 @@
     
     enemy.center = CGPointMake(ROUTE_START_X, ROUTE_START_Y);
 
-    enemyMoving = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(enemyMovement) userInfo:nil repeats:YES];
+    enemyMoving = [NSTimer scheduledTimerWithTimeInterval:0.02 target:self selector:@selector(enemyMovement) userInfo:nil repeats:YES];
 }
 - (void) endGame
 {
