@@ -15,14 +15,14 @@
     #import <Foundation/Foundation.h>
 #endif
 
-#define ROUTE_START_X -44
-#define ROUTE_START_Y 176
-#define ROUTE_LEFT_X 252
-#define ROUTE_LEFT_Y 176
-#define ROUTE_RIGHT_X 252
-#define ROUTE_RIGHT_Y 102
-#define ROUTE_END_X 568
-#define ROUTE_END_Y 102
+#define ROUTE_START_X -22
+#define ROUTE_START_Y 199
+#define ROUTE_LEFT_X 275
+#define ROUTE_LEFT_Y 199
+#define ROUTE_RIGHT_X 275
+#define ROUTE_RIGHT_Y 125
+#define ROUTE_END_X 590
+#define ROUTE_END_Y 125
 
 #define EMPTY_TOWER @"emptytower.png"
 #define TOWER @"tower.png"
