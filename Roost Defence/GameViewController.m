@@ -14,14 +14,62 @@
 
 @implementation GameViewController
 
+
+- (void) towerAttack
+{
+
+}
+- (IBAction)buildADefenceTower:(id)sender
+{
+    towerTwo.hidden = NO;
+    towerOne.hidden = NO;
+    towerThree.hidden = NO;
+    towerFour.hidden = NO;
+//    bullet.center = CGPointMake(towerTwo.center.x, towerTwo.center.y);
+//    bullet.hidden = NO;
+    towerAttacking = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(towerAttack) userInfo:nil repeats:YES];
+}
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    UITouch *touch = [touches anyObject];
+    UIImageView *tower = [[UIImageView alloc] init];
+    if ([touch view] == towerOne
+        || [touch view] == towerTwo
+        || [touch view] == towerThree
+        || [touch view] == towerFour) {
+        tower = (UIImageView*) [touch view];
+        tower.image = [UIImage imageNamed:TOWER];
+        [emptyDefenceTowers removeObject:tower];
+        
+        for (UIImageView* image in emptyDefenceTowers) {
+            image.hidden = YES;
+        }
+    }
+    
+}
+
 - (void) startGame
 {
     towerOne.image = [UIImage imageNamed:EMPTY_TOWER];
     towerTwo.image = [UIImage imageNamed:EMPTY_TOWER];
+    towerThree.image = [UIImage imageNamed:EMPTY_TOWER];
+    towerFour.image = [UIImage imageNamed:EMPTY_TOWER];
+    
+    emptyDefenceTowers = [[NSMutableArray alloc] init];
+    [emptyDefenceTowers addObject:towerOne];
+    [emptyDefenceTowers addObject:towerTwo];
+    [emptyDefenceTowers addObject:towerThree];
+    [emptyDefenceTowers addObject:towerFour];
+
+    [towerOne setUserInteractionEnabled:YES];
+    [towerTwo setUserInteractionEnabled:YES];
+    [towerThree setUserInteractionEnabled:YES];
+    [towerFour setUserInteractionEnabled:YES];
     
     enemy.center = CGPointMake(ROUTE_START_X, ROUTE_START_Y);
-    
-    gameEngine = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(enemyMovement) userInfo:nil repeats:YES];
+
+    enemyMoving = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(enemyMovement) userInfo:nil repeats:YES];
 }
 - (void) endGame
 {
@@ -33,11 +81,17 @@
         enemy.center = CGPointMake(enemy.center.x + 1, ROUTE_START_Y);
     } else if (enemy.center.x == ROUTE_LEFT_X && enemy.center.y > ROUTE_RIGHT_Y) {
         enemy.center = CGPointMake(ROUTE_LEFT_X, enemy.center.y - 1);
-    } else if (enemy.center.x >= ROUTE_LEFT_X && enemy.center.y == ROUTE_RIGHT_Y) {
+        enemy.image = [UIImage imageNamed:ENEMY_UP];
+    } else if (enemy.center.x >= ROUTE_LEFT_X
+               && enemy.center.y == ROUTE_RIGHT_Y
+               && enemy.center.x <= ROUTE_END_X) {
         enemy.center = CGPointMake(enemy.center.x + 1, ROUTE_END_Y);
+        enemy.image = [UIImage imageNamed:ENEMY_RIGHT];
+    } else if (enemy.center.x > ROUTE_END_X ) {
+        enemy.center = CGPointMake(ROUTE_START_X, ROUTE_START_Y);
     }
 }
-- (void) towerAttack
+- (void) towerAttacking
 {
     
 }
@@ -52,7 +106,9 @@
 
 - (void)viewDidLoad
 {
+
     [super viewDidLoad];
+    [self startGame];
     // Do any additional setup after loading the view.
 }
 

@@ -13,14 +13,26 @@
     IBOutlet UIImageView *enemy;
     IBOutlet UIImageView *towerOne;
     IBOutlet UIImageView *towerTwo;
+    IBOutlet UIImageView *towerThree;
+    IBOutlet UIImageView *towerFour;
+//    IBOutlet UIButton *towerTwo;
     
     IBOutlet UILabel *score;
+    IBOutlet UIImageView *bullet;
     
-    NSTimer *gameEngine;
+    IBOutlet UIButton *buildTower;
+    
+    NSTimer *enemyMoving;
+    NSTimer *towerAttacking;
+    
+    NSMutableArray *emptyDefenceTowers;
 }
 
 - (void) startGame;
 - (void) endGame;
 - (void) enemyMovement;
 - (void) towerAttack;
+- (IBAction)buildADefenceTower:(id)sender;
+- (IBAction)defenceTowerBuilt:(id)sender;
+
 @end
