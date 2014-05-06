@@ -9,5 +9,18 @@
 #import <UIKit/UIKit.h>
 
 @interface GameViewController : UIViewController
+{
+    IBOutlet UIImageView *enemy;
+    IBOutlet UIImageView *towerOne;
+    IBOutlet UIImageView *towerTwo;
+    
+    IBOutlet UILabel *score;
+    
+    NSTimer *gameEngine;
+}
 
+- (void) startGame;
+- (void) endGame;
+- (void) enemyMovement;
+- (void) towerAttack;
 @end
