@@ -40,10 +40,10 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="6Ks-eu-YDr">
             <objects>
-                <viewController id="zqh-uh-U0C" sceneMemberID="viewController">
+                <viewController id="zqh-uh-U0C" customClass="GameViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ApR-eT-scV"/>
                         <viewControllerLayoutGuide type="bottom" id="XZg-sL-Zag"/>
@@ -68,11 +68,24 @@
                                 <rect key="frame" x="0.0" y="176" width="44" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DgM-2X-Y2J">
+                                <rect key="frame" x="20" y="20" width="108" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="enemy" destination="a28-H2-NTR" id="Pmq-cv-FFa"/>
+                        <outlet property="score" destination="DgM-2X-Y2J" id="Joi-Sa-Am1"/>
+                        <outlet property="towerOne" destination="OLY-CK-E2b" id="8O1-k0-r2q"/>
+                        <outlet property="towerTwo" destination="5Tv-oe-YAm" id="prU-7n-Pvs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bhh-sL-ubu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -23,3 +23,9 @@
 #define ROUTE_RIGHT_Y 102
 #define ROUTE_END_X 568
 #define ROUTE_END_Y 102
+
+#define EMPTY_TOWER @"emptytower.png"
+#define TOWER @"tower.png"
+#define ENEMY_RIGHT @"tankright.png"
+#define ENEMY_UP @"tankup.png"
+#define BULLET @"bullet.png"

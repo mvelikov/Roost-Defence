@@ -70,8 +70,8 @@
 		0C0FCF1B19190BE8002473CC /* tankright.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tankright.png; sourceTree = "<group>"; };
 		0C0FCF1C19190BE8002473CC /* tankup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tankup.png; sourceTree = "<group>"; };
 		0C0FCF1D19190BE8002473CC /* tower.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tower.png; sourceTree = "<group>"; };
-		0C0FCF26191910C0002473CC /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameViewController.h; path = "Roost Defence/GameViewController.h"; sourceTree = "<group>"; };
-		0C0FCF27191910C0002473CC /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameViewController.m; path = "Roost Defence/GameViewController.m"; sourceTree = "<group>"; };
+		0C0FCF26191910C0002473CC /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		0C0FCF27191910C0002473CC /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +101,6 @@
 		0C0FCED519190B77002473CC = {
 			isa = PBXGroup;
 			children = (
-				0C0FCF26191910C0002473CC /* GameViewController.h */,
-				0C0FCF27191910C0002473CC /* GameViewController.m */,
 				0C0FCEE719190B77002473CC /* Roost Defence */,
 				0C0FCF0619190B77002473CC /* Roost DefenceTests */,
 				0C0FCEE019190B77002473CC /* Frameworks */,
@@ -138,6 +136,8 @@
 				0C0FCEF319190B77002473CC /* Main.storyboard */,
 				0C0FCEF619190B77002473CC /* ViewController.h */,
 				0C0FCEF719190B77002473CC /* ViewController.m */,
+				0C0FCF26191910C0002473CC /* GameViewController.h */,
+				0C0FCF27191910C0002473CC /* GameViewController.m */,
 				0C0FCEF919190B77002473CC /* Images.xcassets */,
 				0C0FCEE819190B77002473CC /* Supporting Files */,
 			);
